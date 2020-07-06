@@ -31,6 +31,15 @@ def main():
 
     Sua escolha: '''))
 
+    velocidade, tipo = teste_velocidade(opcao)
+
+    if opcao == 4:
+        print(f'\nDownload: {velocidade[0] :.2f}')
+        print(f'Upload: {velocidade[1] :.2f}')
+        print(f'Ping: {velocidade[2]}')
+    else:
+        print(f'\nSeu {tipo} é de {velocidade :.2f}')
+
 
 if __name__ == '__main__':
     main()
