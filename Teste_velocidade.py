@@ -36,9 +36,9 @@ def main():
     if opcao == 4:
         print(f'\nDownload: {velocidade[0] :.2f}')
         print(f'Upload: {velocidade[1] :.2f}')
-        print(f'Ping: {velocidade[2]}')
+        print(f'Ping: {velocidade[2]}\n')
     else:
-        print(f'\nSeu {tipo} é de {velocidade :.2f}')
+        print(f'\nSeu {tipo} é de {velocidade :.2f}\n')
 
 
 if __name__ == '__main__':
