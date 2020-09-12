@@ -1,4 +1,5 @@
 import speedtest
+from tabulate import tabulate
 
 velocidade = speedtest.Speedtest()
 
@@ -8,8 +9,8 @@ def teste_velocidade(opcao):
 
     servidores = []
     velocidade.get_servers(servidores)
-    velocidades = [velocidade.download(), velocidade.upload(),
-                   velocidade.results.ping]
+    velocidades = [str(f"{round(velocidade.download() / 1_000_000, 2)} Mbps"), str(f"{round(velocidade.upload() / 1_000_000, 2)} Mbps"),
+                   str(f"{round(velocidade.results.ping, 2)} ms")]
 
     if opcao == 1:
         return (velocidades[0], 'Download')
@@ -34,11 +35,13 @@ def main():
     velocidade, tipo = teste_velocidade(opcao)
 
     if opcao == 4:
-        print(f'\nDownload: {velocidade[0] :.2f}')
-        print(f'Upload: {velocidade[1] :.2f}')
-        print(f'Ping: {velocidade[2]}\n')
+        tabela = [["Download", "Upload", "Ping"], [ velocidade[0], velocidade[1], velocidade[2]]]
+        tabela_velocidade = tabulate(tabela, headers="firstrow", tablefmt="fancy_grid")
+
+        print(tabela_velocidade)
+
     else:
-        print(f'\nSeu {tipo} é de {velocidade :.2f}\n')
+        print(f'\nSeu {tipo} é de {velocidade}\n')
 
 
 if __name__ == '__main__':
