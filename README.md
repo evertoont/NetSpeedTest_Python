@@ -16,6 +16,6 @@ pip install tabulate
 ```
 
 ### :camera: Imagem do projeto
-![Imagem do programa em execução](imagem_velocidade.png) <br>
+![Imagem do programa em execução](https://user-images.githubusercontent.com/55769021/93030166-5fba6600-f5f7-11ea-9952-d714803646ef.png) <br>
 
 **Desenvolvedor:** Everton Reis
