@@ -5,7 +5,7 @@ velocidade = speedtest.Speedtest()
 
 
 def teste_velocidade():
-    print('\nRealizando teste de velocidade, porfavor aguarde... \n')
+    print('\nRealizando teste de velocidade, por favor aguarde... \n')
 
     servidores = []
     velocidade.get_servers(servidores)

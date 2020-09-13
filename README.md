@@ -7,13 +7,15 @@ Script feito em python que realiza um teste de velocidade da internet utilizando
 ### :clipboard: Dependências
 * Pip
 * Biblioteca speedtest_cli
+* Biblioteca tabulate
 
 ### :rocket: Como instalar as dependências
 ```
 pip install speedtest_cli
+pip install tabulate
 ```
 
 ### :camera: Imagem do projeto
-![Imagem do programa em execução](imagem.png) <br>
+![Imagem do programa em execução](imagem_velocidade.png) <br>
 
 **Desenvolvedor:** Everton Reis
